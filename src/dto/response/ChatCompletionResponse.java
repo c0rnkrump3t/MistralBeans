@@ -55,4 +55,14 @@ public class ChatCompletionResponse {
     public void setChoices(List<Choice> choices) {
         this.choices = choices;
     }
+
+    public Usage getUsage() {
+        return usage;
+    }
+
+    public void setUsage(Usage usage) {
+        this.usage = usage;
+    }
 }
+    
+

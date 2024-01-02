@@ -78,9 +78,28 @@ public class ChatCompletionRequest {
     public void setRandom_seed(Integer random_seed) {
         this.random_seed = random_seed;
     }
+
+    public void validateTemperature() {
+        if (temperature != null && (temperature < 0.0 || temperature > 1.0)) {
+            throw new IllegalArgumentException("Temperature must be between 0.0 and 1.0");
+        }
+    }
+
+    public void validateTopP() {
+        if (top_p != null && (top_p < 0.0 || top_p > 1.0)) {
+            throw new IllegalArgumentException("TopP must be between 0.0 and 1.0");
+        }
+    }
+
+    public void validateMaxTokens() {
+        if (max_tokens != null && max_tokens < 0) {
+            throw new IllegalArgumentException("MaxTokens must be non-negative");
+        }
+    }
+
+    public void validateAll() {
+        validateTemperature();
+        validateTopP();
+        validateMaxTokens();
+    }
 }
-/* messages:
-          description: >
-            The prompt(s) to generate completions for, encoded as a list of dict
-            with role and content. The first prompt role should be `user` or
-            `system`.*/
