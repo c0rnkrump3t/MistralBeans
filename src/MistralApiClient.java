@@ -5,8 +5,6 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
-import models.*;
-
 public class MistralApiClient {
 
     private static final String BASE_URL = "https://api.mistral.ai/v1";

@@ -1,4 +1,4 @@
-package dto;
+package models;
 
 public class Usage {
     private int prompt_tokens;

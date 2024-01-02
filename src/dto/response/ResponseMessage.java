@@ -1,8 +1,12 @@
-package dto;
+package dto.response;
 
-public class Message {
+public class ResponseMessage {
     Role role;
     private String content;
+    public ResponseMessage(Role role, String content){
+        this.role = role;
+        this.content = content;
+    }
 
     public Role getRole() {
         return role;

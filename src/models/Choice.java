@@ -1,8 +1,10 @@
-package dto;
+package models;
+
+import dto.response.ResponseMessage;
 
 public class Choice {
     private int integer;
-    private Message message;
+    private ResponseMessage responseMessage;
     private String content;
     private Finish_Reason finish_reason;
 
@@ -16,12 +18,12 @@ public class Choice {
         this.integer = integer;
     }
 
-    public Message getMessage() {
-        return message;
+    public ResponseMessage getMessage() {
+        return responseMessage;
     }
 
-    public void setMessage(Message message) {
-        this.message = message;
+    public void setMessage(ResponseMessage responseMessage) {
+        this.responseMessage = responseMessage;
     }
 
     public String getContent() {

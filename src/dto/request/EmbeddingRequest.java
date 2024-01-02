@@ -1,4 +1,4 @@
-package models;
+package dto.request;
 
 public class EmbeddingRequest {
 }

@@ -1,15 +1,20 @@
-package models;
-
-import dto.Choice;
-
+package dto.response;
+import models.Choice;
+import models.Usage;
 import java.util.List;
 
 public class ChatCompletionResponse {
     private String id;
+
     private String ObjectPropertyName;
+
     private long created;
-    private String model;
+
+    private String responseModel;
+
     private List<Choice> choices;
+
+    private Usage usage;
 
     public String getId() {
         return id;
@@ -35,12 +40,12 @@ public class ChatCompletionResponse {
         this.created = created;
     }
 
-    public String getModel() {
-        return model;
+    public String getResponseModel() {
+        return responseModel;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setResponseModel(String responseModel) {
+        this.responseModel = responseModel;
     }
 
     public List<Choice> getChoices() {
